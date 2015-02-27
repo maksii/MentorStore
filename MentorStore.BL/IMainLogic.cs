@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MentorStore.BL
 {
-    public class Class1
+    public interface IMainLogic<T>
     {
     }
 }

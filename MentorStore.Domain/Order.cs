@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MentorStore.Domain
 {
@@ -10,9 +6,10 @@ namespace MentorStore.Domain
     {
         public string TrackingNumber { get; set; }
         public string Address { get; set; }
-        public string CustomerName { get; set; }
+        public Customer Customer { get; set; }
         public int Quantity { get; set; }
         public double TotalPrice { get; set; }
         public DateTime OrderDate { get; set; }
+        public Product Products { get; set; }
     }
 }

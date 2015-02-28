@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MentorStore.Domain
 {
-    public class Class1
+    public class BaseEntity
     {
+        public int Id { get; set; }
     }
 }

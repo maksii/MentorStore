@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MentorStore.BL
+﻿namespace MentorStore.BL
 {
-    public class MainLogic<T> : IMainLogic<T>
+    public class MainLogic<TEntity> : IMainLogic<TEntity>
     {
+
     }
 }

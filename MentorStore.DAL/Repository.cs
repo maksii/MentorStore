@@ -9,42 +9,48 @@ namespace MentorStore.DAL
         where TEntity : class
         where TContext : DbContext, new()
     {
-        private TContext context;
+        private TContext _entities;
         public TContext Context
         {
             get
             {
-                return context;
+                return _entities;
             }
             set
             {
-                context = value;
+                _entities = value;
             }
         }
         public virtual IQueryable<TEntity> GetAll()
         {
-            return context.Set<TEntity>();
+            var query = _entities.Set<TEntity>();
+            return query;
         }
         public IQueryable<TEntity> GetBy(Expression<Func<TEntity, bool>> predicate)
         {
-            return context.Set<TEntity>().Where(predicate);
+            var query = _entities.Set<TEntity>().Where(predicate);
+            return query;
         }
         public virtual TEntity GetByID(int id)
         {
-            return context.Set<TEntity>().Find(id);
+            var query = _entities.Set<TEntity>().Find(id);
+            return query;
         }
-        public abstract int Add(TEntity entity); //no idea
+        public virtual void Add(TEntity entity)
+        {
+            _entities.Set<TEntity>().Add(entity);
+        }
         public virtual void Delete(TEntity entity)
         {
-            context.Set<TEntity>().Remove(entity);
+            _entities.Set<TEntity>().Remove(entity);
         }
         public virtual void Edit(TEntity entity)
         {
-            context.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+            _entities.Entry(entity).State = System.Data.Entity.EntityState.Modified;
         }
         public virtual void Save()
         {
-            context.SaveChanges();
+            _entities.SaveChanges();
         }
     }
 }

@@ -9,9 +9,9 @@ namespace MentorStore.DAL
         IQueryable<TEntity> GetAll();
         IQueryable<TEntity> GetBy(Expression<Func<TEntity, bool>> predicate);
         TEntity GetByID(int id);
-        int Add(TEntity enitiy);
-        void Delete(TEntity enitiy);
-        void Edit(TEntity enitiy);
+        int Add(TEntity entity);
+        void Delete(TEntity entity);
+        void Edit(TEntity entity);
         void Save();
     }
 }

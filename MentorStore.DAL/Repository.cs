@@ -2,9 +2,9 @@
 
 namespace MentorStore.DAL
 {
-    class Repository<C, T> : IRepository<T>
-        where T : class
-        where C : DbContext, new()
+    public class Repository<TContext, TEntity> : IRepository<TEntity>
+        where TEntity : class
+        where TContext : DbContext, new()
     {
     }
 }

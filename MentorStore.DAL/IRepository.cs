@@ -1,6 +1,6 @@
 ﻿namespace MentorStore.DAL
 {
-    interface IRepository<TEntity>
+    public interface IRepository<TEntity>
         where TEntity : class
     {
     }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MentorStore.DAL
 {
-    public class Class1
+    interface IRepository<TEntity>
+        where TEntity : class
     {
     }
 }

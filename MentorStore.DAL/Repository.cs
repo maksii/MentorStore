@@ -1,10 +1,56 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace MentorStore.DAL
 {
-    public class Repository<TContext, TEntity> : IRepository<TEntity>
+    public abstract class Repository<TContext, TEntity> : IRepository<TEntity>
         where TEntity : class
         where TContext : DbContext, new()
     {
+        private TContext _entities;
+        public TContext Context
+        {
+            get
+            {
+                return _entities;
+            }
+            set
+            {
+                _entities = value;
+            }
+        }
+        public virtual IQueryable<TEntity> GetAll()
+        {
+            var query = _entities.Set<TEntity>();
+            return query;
+        }
+        public IQueryable<TEntity> GetBy(Expression<Func<TEntity, bool>> predicate)
+        {
+            var query = _entities.Set<TEntity>().Where(predicate);
+            return query;
+        }
+        public virtual TEntity GetByID(int id)
+        {
+            var query = _entities.Set<TEntity>().Find(id);
+            return query;
+        }
+        public virtual void Add(TEntity entity)
+        {
+            _entities.Set<TEntity>().Add(entity);
+        }
+        public virtual void Delete(TEntity entity)
+        {
+            _entities.Set<TEntity>().Remove(entity);
+        }
+        public virtual void Edit(TEntity entity)
+        {
+            _entities.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+        }
+        public virtual void Save()
+        {
+            _entities.SaveChanges();
+        }
     }
 }

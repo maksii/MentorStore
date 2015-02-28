@@ -10,9 +10,10 @@ namespace MentorStore.Domain
     {
         public string TrackingNumber { get; set; }
         public string Address { get; set; }
-        public string CustomerName { get; set; }
+        public Customer Customer { get; set; }
         public int Quantity { get; set; }
         public double TotalPrice { get; set; }
         public DateTime OrderDate { get; set; }
+        public Order Order { get; set; }
     }
 }

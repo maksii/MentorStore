@@ -10,5 +10,6 @@ namespace MentorStore.Domain
     {
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
+        public List<Order> Orders { get; set; }
     }
 }

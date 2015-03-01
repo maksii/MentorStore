@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MentorStore.Web.Controllers
 {
-    public class HomeController : Controller
+    public class ProductController : Controller
     {
         public ActionResult Index()
         {

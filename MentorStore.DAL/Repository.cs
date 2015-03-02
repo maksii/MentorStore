@@ -9,7 +9,7 @@ namespace MentorStore.DAL
         where TEntity : class
         where TContext : DbContext, new()
     {
-        private TContext _entities;
+        private TContext _entities = new TContext();
         public TContext Context
         {
             get
@@ -51,6 +51,24 @@ namespace MentorStore.DAL
         public virtual void Save()
         {
             _entities.SaveChanges();
+        }
+
+        private bool _disposed = false;
+
+        protected virtual void Dispose(bool disposing)
+        {
+
+            if (!this._disposed)
+                if (disposing)
+                    _entities.Dispose();
+
+            this._disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

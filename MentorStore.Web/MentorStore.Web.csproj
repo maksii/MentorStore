@@ -247,6 +247,16 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MentorStore.BL\MentorStore.BL.csproj">
+      <Project>{6bc18e90-9031-4786-849e-d7c76063bb1a}</Project>
+      <Name>MentorStore.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MentorStore.Domain\MentorStore.Domain.csproj">
+      <Project>{a02c8f94-56d7-4181-9a0b-b20d680ace1d}</Project>
+      <Name>MentorStore.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

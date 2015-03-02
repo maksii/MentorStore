@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -49,6 +52,20 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MentorStore.DAL.DB\MentorStore.DAL.DB.csproj">
+      <Project>{37668d3b-7e07-4422-a42b-679821b0a3e9}</Project>
+      <Name>MentorStore.DAL.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MentorStore.DAL\MentorStore.DAL.csproj">
+      <Project>{f82dff45-06e7-409c-a9a5-4898cb309ace}</Project>
+      <Name>MentorStore.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MentorStore.Domain\MentorStore.Domain.csproj">
+      <Project>{a02c8f94-56d7-4181-9a0b-b20d680ace1d}</Project>
+      <Name>MentorStore.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

@@ -3,8 +3,7 @@ using System.Linq;
 using System.Linq.Expressions;
 namespace MentorStore.DAL
 {
-    public interface IRepository<TEntity>
-        where TEntity : class
+    public interface IRepository<TEntity> : IDisposable where TEntity : class
     {
         IQueryable<TEntity> GetAll();
         IQueryable<TEntity> GetBy(Expression<Func<TEntity, bool>> predicate);

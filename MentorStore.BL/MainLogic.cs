@@ -12,16 +12,19 @@ namespace MentorStore.BL
         public void AddEntity(TEntity entity)
         {
             _storeRepository.Add(entity);
+            _storeRepository.Save();
         }
 
         public void DeleteEntity(TEntity entity)
         {
            _storeRepository.Delete(entity);
+           _storeRepository.Save();
         }
 
         public void EditEntity(TEntity entity)
         {
           _storeRepository.Edit(entity);
+          _storeRepository.Save();
         }
 
         public IQueryable<TEntity> SearchFor(Expression<Func<TEntity, bool>> predicate)

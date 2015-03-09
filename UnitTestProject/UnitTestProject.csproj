@@ -50,12 +50,25 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="BL\MainLogicTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BL\" />
     <Folder Include="Clients\" />
     <Folder Include="DAL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MentorStore.BL\MentorStore.BL.csproj">
+      <Project>{6BC18E90-9031-4786-849E-D7C76063BB1A}</Project>
+      <Name>MentorStore.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MentorStore.Domain\MentorStore.Domain.csproj">
+      <Project>{a02c8f94-56d7-4181-9a0b-b20d680ace1d}</Project>
+      <Name>MentorStore.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

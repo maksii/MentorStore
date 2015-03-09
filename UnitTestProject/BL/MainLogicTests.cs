@@ -34,7 +34,6 @@ namespace UnitTestProject.BL
 
             cat1.CategoryName = "UnitTest1";
             cat2.CategoryName = "UnitTest2";
-
             _categoryMainLogic.AddEntity(cat1);
             _categoryMainLogic.AddEntity(cat2);
 

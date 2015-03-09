@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ED70C8A1-C62A-499A-815C-CCF94E8526EE}</ProjectGuid>
+    <ProjectGuid>601d110c-41b5-42da-afae-b16f352f671a</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnitTestProject</RootNamespace>
-    <AssemblyName>UnitTestProject</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <RootNamespace>MentorStore.BLTests</RootNamespace>
+    <AssemblyName>MentorStore.BLTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -50,25 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="BL\MainLogicTests.cs" />
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Clients\" />
-    <Folder Include="DAL\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MentorStore.BL\MentorStore.BL.csproj">
-      <Project>{6BC18E90-9031-4786-849E-D7C76063BB1A}</Project>
-      <Name>MentorStore.BL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MentorStore.Domain\MentorStore.Domain.csproj">
-      <Project>{a02c8f94-56d7-4181-9a0b-b20d680ace1d}</Project>
-      <Name>MentorStore.Domain</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

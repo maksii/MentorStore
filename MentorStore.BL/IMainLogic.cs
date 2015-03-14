@@ -11,6 +11,6 @@ namespace MentorStore.BL
         void EditEntity(TEntity entity);
         IQueryable<TEntity> SearchFor(Expression<Func<TEntity, bool>> predicate);
         IQueryable<TEntity> GetAll();
-        TEntity GetEntityById(int id);
+        TEntity GetEntityById(int? id);
     }
 }

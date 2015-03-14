@@ -45,9 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryLogic.cs" />
+    <Compile Include="ICategoryLogic.cs" />
     <Compile Include="IMainLogic.cs" />
+    <Compile Include="IProductLogic.cs" />
     <Compile Include="MainLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProductLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

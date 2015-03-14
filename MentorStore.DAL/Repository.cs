@@ -31,7 +31,7 @@ namespace MentorStore.DAL
             var query = _entities.Set<TEntity>().Where(predicate);
             return query;
         }
-        public virtual TEntity GetByID(int id)
+        public virtual TEntity GetByID(int? id)
         {
             var query = _entities.Set<TEntity>().Find(id);
             return query;

@@ -41,7 +41,7 @@ namespace MentorStore.BL
             return resultEntities;
         }
 
-        public TEntity GetEntityById(int id)
+        public TEntity GetEntityById(int? id)
         {
             TEntity resultEntity = _storeRepository.GetByID(id);
 

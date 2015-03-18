@@ -12,9 +12,9 @@ namespace MentorStore.BL
     {
         StoreRepository<Category> _storeRepository = new StoreRepository<Category>();
 
-        public IQueryable<Category> GetAllCategories(int? id)
+        public IQueryable<Category> GetAllCategories()
         {
-            return _storeRepository.GetBy(cat => cat.Id == id);
+            return _storeRepository.GetAll();
         }
     }
 }

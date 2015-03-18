@@ -9,6 +9,6 @@ namespace MentorStore.BL
 {
     public interface ICategoryLogic : IMainLogic<Domain.Category>
     {
-        IQueryable<Category> GetAllCategories(int? id);
+        IQueryable<Category> GetAllCategories();
     }
 }

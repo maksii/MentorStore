@@ -7,7 +7,7 @@ namespace MentorStore.DAL
     {
         IQueryable<TEntity> GetAll();
         IQueryable<TEntity> GetBy(Expression<Func<TEntity, bool>> predicate);
-        TEntity GetByID(int? id);
+        TEntity GetByID(int id);
         void Add(TEntity entity);
         void Delete(TEntity entity);
         void Edit(TEntity entity);

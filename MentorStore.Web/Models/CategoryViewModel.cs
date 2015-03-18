@@ -7,7 +7,7 @@ using MentorStore.Domain;
 
 namespace MentorStore.Web.Models
 {
-    public class CategoryViewModel : BaseEntity
+    public class CategoryViewModel 
     {
         public Category Category { get; set; }
         public List<Product> Products { get; set; }

@@ -7,16 +7,15 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Category.CategoryName)
+            <h1>@Model.Category.CategoryName</h1> 
         </dt>
         <dt>
             @foreach (var item in Model.Products)
             {
-                @item.Description;
+                <p>Product: @item.Name</p>
+                <p>@Html.ActionLink("Details", "Details", new { id = Model.Category.Id })</p>
             }
         </dt>
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Category.Id }) |
-</p>
+

@@ -20,9 +20,10 @@ namespace MentorStore.Web.Controllers
             this._productLogic = productLogic;
         }
 
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
-            return View();
+            Product product = _productLogic.GetEntityById(id);
+            return View(product);
         }
 
     }

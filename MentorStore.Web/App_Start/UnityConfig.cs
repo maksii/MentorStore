@@ -15,8 +15,10 @@ namespace MentorStore.Web
             // it is NOT necessary to register your controllers
             
             container.RegisterType(typeof(IMainLogic<>), typeof(MainLogic<>));
+            container.RegisterType(typeof(ICategoryLogic), typeof(CategoryLogic));
+            container.RegisterType(typeof(IProductLogic), typeof(ProductLogic));
             
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
-        }
+         }
     }
 }

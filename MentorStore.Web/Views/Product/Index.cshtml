@@ -1,6 +1,13 @@
-﻿
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@model  MentorStore.Domain.Product
 
+<h1>Product: @Model.Name</h1>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            <p>Description: @Model.Description</p>
+            <p>Price: @Model.Price</p>
+        </dt>
+    </dl>
+</div>
 
